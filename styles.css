@@ -1,0 +1,393 @@
+.group {
+  position: relative;
+  margin-bottom: 45px;
+}
+
+.unim {
+  margin-left: 2%;
+  width: 15%;
+  height: 10%;
+}
+
+.selecionar {
+  margin-top: 3%;
+  border: none;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 300px;
+  border: none;
+  border-bottom: 1px solid #757575;
+  background-color: #ffffff;
+}
+
+p {
+  font-size: 18px;
+  padding: 5px 10px 5px 5px;
+  display: block;
+  width: 300px;
+  border: none;
+  background-color: #ffffff;
+}
+
+input {
+  font-size: 18px;
+  padding: 15px 10px 10px 5px;
+  display: block;
+  width: 300px;
+  border: none;
+  border-bottom: 1px solid #757575;
+  background-color: #ffffff;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* LABEL ======================================= */
+
+label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  pointer-events: none;
+  left: 28%;
+  top: 20%;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+/* active state */
+
+input:focus ~ label,
+input:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: dodgerblue;
+}
+
+/* BOTTOM BARS ================================= */
+
+.bar {
+  position: relative;
+  display: block;
+  width: 300px;
+}
+
+.bar:before,
+.bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: dodgerblue;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+  left: 50%;
+}
+
+.bar:after {
+  right: 50%;
+}
+
+/* active state */
+
+input:focus ~ .bar:before,
+input:focus ~ .bar:after {
+  width: 50%;
+}
+
+/* active state */
+
+input:focus ~ .highlight {
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+
+@-webkit-keyframes inputHighlighter {
+  from {
+    background: dodgerblue;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+@-moz-keyframes inputHighlighter {
+  from {
+    background: dodgerblue;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+@keyframes inputHighlighter {
+  from {
+    background: dodgerblue;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+.caixa {
+  margin-top: 10%;
+  margin-bottom: 2%;
+}
+
+* {
+  font-family: Montserrat;
+}
+
+body {
+  background-color: #00975c;
+}
+
+.sub {
+  margin-top: 15%;
+}
+
+.header {
+  overflow: hidden;
+  background-color: #ffffff;
+  padding: 20px 10px;
+  border-radius: 10px;
+}
+
+/* Style the header links */
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+
+.header a.logo {
+  font-size: 35px;
+  font-weight: bold;
+  color: rgb(89, 91, 250);
+}
+
+.header a span {
+  font-weight: 1000;
+  color: rgb(36, 38, 170);
+}
+
+/* Change the background color on mouse-over */
+
+.header a:hover {
+  background-color: #ddd;
+}
+
+/* Style the active/current link*/
+
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+/* Float the link section to the right */
+
+.header-right {
+  float: right;
+}
+
+.box {
+  display: flexbox;
+  position: absolute;
+  left: 31%;
+  width: 38%;
+  margin-top: 4%;
+  margin-bottom: 0;
+  height: 60%;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.box1 {
+  display: flexbox;
+  position: absolute;
+  left: 31%;
+  width: 38%;
+  margin-top: 4%;
+  margin-bottom: 0;
+  height: 60%;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.box3 {
+  display: none;
+  position: absolute;
+  left: 31%;
+  width: 38%;
+  margin-top: 4%;
+  margin-bottom: 0;
+  height: 68%;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.box4 {
+  display: none;
+  position: absolute;
+  left: 31%;
+  width: 38%;
+  margin-top: 6%;
+  margin-bottom: 0;
+  height: 70%;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.box2 {
+  left: 30%;
+  width: 40%;
+  height: 53%;
+}
+
+#n1 {
+  display: none;
+}
+
+#n2 {
+  display: none;
+}
+
+#n3 {
+  display: none;
+}
+
+button.log {
+  margin-top: 4%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  padding: 15px 30px;
+  background: #00975c;
+  border-radius: 9px;
+  border: 0px solid rgb(2, 134, 84);
+  cursor: pointer;
+}
+
+button.log2 {
+  margin-top: 4%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  padding: 15px 30px;
+  background: rgb(207, 57, 57);
+  border-radius: 9px;
+  border: 0px solid rgb(2, 134, 84);
+  cursor: pointer;
+  margin-left: 2%;
+}
+
+.ns {
+  margin-bottom: 8%;
+}
+
+button.log:hover {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#00975c),
+    to(rgb(11, 172, 110))
+  );
+}
+
+button.log2:hover {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgb(207, 57, 57)),
+    to(rgb(224, 99, 99))
+  );
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  body {
+    background-color: #b3e1fb;
+  }
+  .header {
+    box-shadow: none;
+  }
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+  .box {
+    position: absolute;
+    left: 2%;
+    width: 96%;
+    margin-top: 4%;
+    margin-bottom: 2%;
+    height: 60%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: none;
+  }
+  .caixa {
+    margin-top: 12%;
+    margin-bottom: 1%;
+  }
+  label {
+    position: absolute;
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    pointer-events: none;
+    left: 9%;
+    top: 20%;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+  }
+  button.log {
+    margin-top: 10%;
+    padding: 15px 30px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 120px) {
+  label {
+    position: absolute;
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    pointer-events: none;
+    left: 27.5%;
+    top: 20%;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+  }
+}
