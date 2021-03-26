@@ -37,7 +37,7 @@ if (isset($_POST['cadastrar'])) {
 </head>
 
 <body class="pt-5">
-    <aside class="sufee-login d-flex align-content-center flex-wrap">
+    <aside class="sufee-login d-flex align-content-center">
 
         <section class="header-box col-lg-10 col-md-10 col-sm-10" id="boxIn">
             <center>
@@ -116,7 +116,7 @@ if (isset($_POST['cadastrar'])) {
 
                         <section class="col-lg-5 col-md-5 col-sm-5 mt-4">
                             <button class="btn btn-success btn-block" type="submit" name="cadastrar">Confirmar</button>
-                            <button class="btn btn-danger btn-block" target="#boxIn">Cancelar</button>
+                            <button class="btn btn-danger btn-block">Cancelar</button>
                         </section>
                     </form>
                 </div>
