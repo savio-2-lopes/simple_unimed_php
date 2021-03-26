@@ -217,7 +217,6 @@ body {
   background-color: var(--white);
   border-radius: 10px;
 }
-
 .box2 {
   left: 30%;
   width: 40%;
@@ -244,6 +243,9 @@ body {
     display: block;
     text-align: left;
   }
+  .input-box {
+    width: 200px;
+  }
   .header-right {
     float: none;
   }
@@ -262,7 +264,7 @@ body {
     width: 60%;
   }
   .row-box {
-    width: 70%;
+    width: 50%;
   }
   .section-box {
     margin-top: 12%;

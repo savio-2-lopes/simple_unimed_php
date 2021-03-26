@@ -49,8 +49,8 @@ if (isset($_POST['cadastrar'])) {
                     </a>
 
                     <form method="POST" class="mt-3">
-                        <input type="text" placeholder="Nome" name="nome" id="nome">
-                        <input type="text" placeholder="Idade" name="idade" id="idade">
+                        <input type="text" class="input-box" placeholder="Nome" name="nome" id="nome">
+                        <input type="text" class="input-box" placeholder="Idade" name="idade" id="idade">
 
                         <select class="select-box" name="plano" id="tipo">
                             <option>Enfermaria</option>
