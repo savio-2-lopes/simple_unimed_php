@@ -9,9 +9,9 @@ class PropostaDAO
         $this->conexao = new Conexao();
     }
 
-    public function cadastra($nome, $idade, $categoria, $total)
+    public function cadastra($nome, $idade, $plano, $total)
     {
-        $sql = "INSERT INTO unimed (nome,idade,categoria,total) VALUES ('$nome','$idade','$categoria','$total')";
+        $sql = "INSERT INTO unimed (nome,idade,plano,total) VALUES ('$nome','$idade','$plano','$total')";
         $executa = mysqli_query($this->conexao->getCon(), $sql);
 
         if (mysqli_affected_rows($this->conexao->getCon()) > 0) {
