@@ -50,7 +50,7 @@ if (isset($_POST['cadastrar'])) {
 
                     <form method="POST" class="mt-3">
                         <input type="text" class="input-box" placeholder="Nome" name="nome" id="nome" required>
-                        <input type="text" class="input-box" placeholder="Idade" name="idade" id="idade" required>
+                        <input type="number" class="input-box" placeholder="Idade" name="idade" id="idade" required>
 
                         <select class="select-box" name="plano" id="tipo" required>
                             <option>Enfermaria</option>
@@ -88,9 +88,9 @@ if (isset($_POST['cadastrar'])) {
                             <option>3</option>
                         </select>
 
-                        <input type="text" placeholder="Insira a idade 1" id="n1" required>
-                        <input type="text" placeholder="Insira a idade 2" id="n2" required>
-                        <input type="text" placeholder="Insira a idade 3" id="n3" required>
+                        <input type="number" placeholder="Insira a idade 1" id="n1" required>
+                        <input type="number" placeholder="Insira a idade 2" id="n2" required>
+                        <input type="number" placeholder="Insira a idade 3" id="n3" required>
                     </form>
 
                     <section class="col-lg-5 col-md-5 col-sm-5 mt-4">
@@ -100,7 +100,7 @@ if (isset($_POST['cadastrar'])) {
             </center>
         </section>
 
-        <section class="row-box" id="boxIn3">
+        <section class="row-box-screen" id="boxIn3">
             <center>
                 <div class="section-box">
                     <header>
@@ -110,7 +110,7 @@ if (isset($_POST['cadastrar'])) {
                     <form action="#" method="POST">
                         <input type="text" name="nome" placeholder="Nome" id="nome2" readonly>
                         <input type="text" placeholder="ident" id="ident2" readonly>
-                        <input type="text" name="total" placeholder="Valor" id="valor2" readonly>
+                        <input type="text" name="total" placeholder="Valor" id="valor2" readonly></span>
                         <input type="text" name="idade" placeholder="Idade" id="idade3" readonly>
                         <input type="text" name="plano" placeholder="Entidade" id="tipo2" readonly>
 
@@ -119,6 +119,7 @@ if (isset($_POST['cadastrar'])) {
                             <button class="btn btn-danger btn-block">Cancelar</button>
                         </section>
                     </form>
+
                 </div>
             </center>
         </section>

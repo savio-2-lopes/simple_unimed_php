@@ -206,6 +206,17 @@ body {
   background-color: var(--white);
   border-radius: 10px;
 }
+.row-box-screen {
+  display: none;
+  position: absolute;
+  left: 31%;
+  width: 40%;
+  margin-top: 2%;
+  margin-bottom: 0;
+  height: 80%;
+  background-color: var(--white);
+  border-radius: 10px;
+}
 .box4 {
   display: none;
   position: absolute;
@@ -263,7 +274,8 @@ body {
   .header-box {
     width: 60%;
   }
-  .row-box {
+  .row-box,
+  .row-box-screen {
     width: 50%;
   }
   .section-box {
