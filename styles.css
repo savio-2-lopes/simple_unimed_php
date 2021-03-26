@@ -280,6 +280,9 @@ body {
     -moz-transition: 0.2s ease all;
     -webkit-transition: 0.2s ease all;
   }
+  .select-box {
+    width: 200px;
+  }
 }
 
 @media screen and (min-width: 769px) and (max-width: 120px) {
