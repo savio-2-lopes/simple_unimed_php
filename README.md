@@ -52,7 +52,7 @@ Além disto é bom ter um editor para trabalhar com o código, como, por exemplo
 
 ```bash
 
-# Primeiramente, importe arquivo loja1.sql para seu banco de dados mySQL
+# Primeiramente, importe arquivo unimed.sql para seu banco de dados mySQL
 
 # Entre na pasta htdocs do XAMPP (ou www no WAMP) e clone este repositório
 $ git clone https://github.com/savio-2-lopes/simple_unimed_php.git
