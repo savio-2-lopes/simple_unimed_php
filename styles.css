@@ -195,7 +195,6 @@ body {
   background-color: var(--white);
   border-radius: 10px;
 }
-
 .row-box {
   display: none;
   position: absolute;
@@ -207,7 +206,6 @@ body {
   background-color: var(--white);
   border-radius: 10px;
 }
-
 .box4 {
   display: none;
   position: absolute;
@@ -236,7 +234,7 @@ body {
 
 @media screen and (min-width: 0px) and (max-width: 768px) {
   body {
-    background-color: var(--gray);
+    background-color: var(--green);
   }
   .header {
     box-shadow: none;
@@ -259,6 +257,12 @@ body {
     background-color: var(--white);
     border-radius: 10px;
     box-shadow: none;
+  }
+  .header-box {
+    width: 60%;
+  }
+  .row-box {
+    width: 70%;
   }
   .section-box {
     margin-top: 12%;
@@ -290,5 +294,11 @@ body {
     transition: 0.2s ease all;
     -moz-transition: 0.2s ease all;
     -webkit-transition: 0.2s ease all;
+  }
+  .header-box {
+    width: 60%;
+  }
+  .row-box {
+    width: 70%;
   }
 }
