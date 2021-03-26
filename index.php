@@ -56,6 +56,7 @@ $insere = $cadastrar->cadastra($nome, $idade, $categoria_plano, $total);
             </div>
         </center>
     </div>
+
     <div class="box3" id="bx2">
         <center>
             <div class="caixa">
