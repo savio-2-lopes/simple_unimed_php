@@ -119,10 +119,10 @@ if (isset($_POST['cadastrar'])) {
                             <button class="btn btn-danger btn-block">Cancelar</button>
                         </section>
                     </form>
-
                 </div>
             </center>
         </section>
+
     </aside>
 
     <script src="script.js"></script>
