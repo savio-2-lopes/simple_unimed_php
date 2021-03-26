@@ -36,7 +36,7 @@ if (isset($_POST['cadastrar'])) {
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="pt-5" style="margin:15rem">
+<body class="pt-5">
     <aside class="sufee-login d-flex align-content-center flex-wrap">
 
         <section class="header-box col-lg-10 col-md-10 col-sm-10" id="boxIn">
@@ -49,10 +49,10 @@ if (isset($_POST['cadastrar'])) {
                     </a>
 
                     <form method="POST" class="mt-3">
-                        <input type="text" class="input-box" placeholder="Nome" name="nome" id="nome">
-                        <input type="text" class="input-box" placeholder="Idade" name="idade" id="idade">
+                        <input type="text" class="input-box" placeholder="Nome" name="nome" id="nome" required>
+                        <input type="text" class="input-box" placeholder="Idade" name="idade" id="idade" required>
 
-                        <select class="select-box" name="plano" id="tipo">
+                        <select class="select-box" name="plano" id="tipo" required>
                             <option>Enfermaria</option>
                             <option>Apartamento</option>
                         </select>
@@ -88,9 +88,9 @@ if (isset($_POST['cadastrar'])) {
                             <option>3</option>
                         </select>
 
-                        <input type="text" placeholder="Insira a idade 1" id="n1">
-                        <input type="text" placeholder="Insira a idade 2" id="n2">
-                        <input type="text" placeholder="Insira a idade 3" id="n3">
+                        <input type="text" placeholder="Insira a idade 1" id="n1" required>
+                        <input type="text" placeholder="Insira a idade 2" id="n2" required>
+                        <input type="text" placeholder="Insira a idade 3" id="n3" required>
                     </form>
 
                     <section class="col-lg-5 col-md-5 col-sm-5 mt-4">
