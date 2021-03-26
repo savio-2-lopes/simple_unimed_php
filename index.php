@@ -2,8 +2,9 @@
 session_start();
 
 if (isset($_POST['register'])) {
+
     require_once('conecta.php');
-    require_once('DAOproposta.php');
+    require_once('proposta.php');
 
     $register = new ConsultaPOO();
 
