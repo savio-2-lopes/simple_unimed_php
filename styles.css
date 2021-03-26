@@ -1,15 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --white: #fff;
+  --gray: #b3e1fb;
+  --line-gray: #878787;
+  --red: #e83f5b;
+  --green: #00975c;
+  --blue: dodgerblue;
+  --black: #000;
+}
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
+}
 .group {
   position: relative;
   margin-bottom: 45px;
 }
-
-.unim {
-  margin-left: 2%;
-  width: 15%;
-  height: 10%;
-}
-
-.selecionar {
+.select-box {
   margin-top: 3%;
   border: none;
   font-size: 18px;
@@ -18,18 +35,16 @@
   width: 300px;
   border: none;
   border-bottom: 1px solid #757575;
-  background-color: #ffffff;
+  background-color: var(--white);
 }
-
 p {
   font-size: 18px;
   padding: 5px 10px 5px 5px;
   display: block;
   width: 300px;
   border: none;
-  background-color: #ffffff;
+  background-color: var(--white);
 }
-
 input {
   font-size: 18px;
   padding: 15px 10px 10px 5px;
@@ -37,15 +52,14 @@ input {
   width: 300px;
   border: none;
   border-bottom: 1px solid #757575;
-  background-color: #ffffff;
+  background-color: var(--white);
 }
-
 input:focus {
   outline: none;
 }
-
-/* LABEL ======================================= */
-
+#logo {
+  width: 10rem;
+}
 label {
   color: #999;
   font-size: 18px;
@@ -57,24 +71,17 @@ label {
   -moz-transition: 0.2s ease all;
   -webkit-transition: 0.2s ease all;
 }
-
-/* active state */
-
 input:focus ~ label,
 input:valid ~ label {
   top: -20px;
   font-size: 14px;
-  color: dodgerblue;
+  color: var(--blue);
 }
-
-/* BOTTOM BARS ================================= */
-
 .bar {
   position: relative;
   display: block;
   width: 300px;
 }
-
 .bar:before,
 .bar:after {
   content: "";
@@ -82,50 +89,38 @@ input:valid ~ label {
   width: 0;
   bottom: 1px;
   position: absolute;
-  background: dodgerblue;
+  background: var(--blue);
   transition: 0.2s ease all;
   -moz-transition: 0.2s ease all;
   -webkit-transition: 0.2s ease all;
 }
-
 .bar:before {
   left: 50%;
 }
-
 .bar:after {
   right: 50%;
 }
-
-/* active state */
-
 input:focus ~ .bar:before,
 input:focus ~ .bar:after {
   width: 50%;
 }
-
-/* active state */
-
 input:focus ~ .highlight {
   -webkit-animation: inputHighlighter 0.3s ease;
   -moz-animation: inputHighlighter 0.3s ease;
   animation: inputHighlighter 0.3s ease;
 }
-
-/* ANIMATIONS ================ */
-
 @-webkit-keyframes inputHighlighter {
   from {
-    background: dodgerblue;
+    background: var(--blue);
   }
   to {
     width: 0;
     background: transparent;
   }
 }
-
 @-moz-keyframes inputHighlighter {
   from {
-    background: dodgerblue;
+    background: var(--green);
   }
   to {
     width: 0;
@@ -135,43 +130,32 @@ input:focus ~ .highlight {
 
 @keyframes inputHighlighter {
   from {
-    background: dodgerblue;
+    background: var(--green);
   }
   to {
     width: 0;
     background: transparent;
   }
 }
-
-.caixa {
+.section-box {
   margin-top: 10%;
   margin-bottom: 2%;
 }
-
 * {
   font-family: "Roboto", sans-serif;
 }
-
 body {
-  background-color: #00975c;
+  background-color: var(--green);
 }
-
-.sub {
-  margin-top: 15%;
-}
-
 .header {
   overflow: hidden;
-  background-color: #ffffff;
+  background-color: var(--white);
   padding: 20px 10px;
   border-radius: 10px;
 }
-
-/* Style the header links */
-
 .header a {
   float: left;
-  color: black;
+  color: var(--black);
   text-align: center;
   padding: 12px;
   text-decoration: none;
@@ -179,39 +163,16 @@ body {
   line-height: 25px;
   border-radius: 4px;
 }
-
-/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
-
-.header a.logo {
-  font-size: 35px;
-  font-weight: bold;
-  color: rgb(89, 91, 250);
-}
-
-.header a span {
-  font-weight: 1000;
-  color: rgb(36, 38, 170);
-}
-
-/* Change the background color on mouse-over */
-
 .header a:hover {
   background-color: #ddd;
 }
-
-/* Style the active/current link*/
-
 .header a.active {
-  background-color: dodgerblue;
-  color: white;
+  background-color: var(--green);
+  color: var(--white);
 }
-
-/* Float the link section to the right */
-
 .header-right {
   float: right;
 }
-
 .box {
   display: flexbox;
   position: absolute;
@@ -220,31 +181,30 @@ body {
   margin-top: 4%;
   margin-bottom: 0;
   height: 60%;
-  background-color: #ffffff;
+  background-color: var(--white);
   border-radius: 10px;
 }
-
-.box1 {
+.header-box {
   display: flexbox;
   position: absolute;
   left: 31%;
-  width: 38%;
+  width: 40%;
   margin-top: 4%;
   margin-bottom: 0;
-  height: 60%;
-  background-color: #ffffff;
+  height: 70%;
+  background-color: var(--white);
   border-radius: 10px;
 }
 
-.box3 {
+.row-box {
   display: none;
   position: absolute;
   left: 31%;
-  width: 38%;
+  width: 40%;
   margin-top: 4%;
   margin-bottom: 0;
-  height: 68%;
-  background-color: #ffffff;
+  height: 80%;
+  background-color: var(--white);
   border-radius: 10px;
 }
 
@@ -256,7 +216,7 @@ body {
   margin-top: 6%;
   margin-bottom: 0;
   height: 70%;
-  background-color: #ffffff;
+  background-color: var(--white);
   border-radius: 10px;
 }
 
@@ -265,73 +225,18 @@ body {
   width: 40%;
   height: 53%;
 }
-
-#n1 {
-  display: none;
-}
-
-#n2 {
-  display: none;
-}
-
+#n1,
+#n2,
 #n3 {
   display: none;
 }
-
-button.log {
-  margin-top: 4%;
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
-  color: #ffffff;
-  padding: 15px 30px;
-  background: #00975c;
-  border-radius: 9px;
-  border: 0px solid rgb(2, 134, 84);
-  cursor: pointer;
-}
-
-button.log2 {
-  margin-top: 4%;
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
-  color: #ffffff;
-  padding: 15px 30px;
-  background: rgb(207, 57, 57);
-  border-radius: 9px;
-  border: 0px solid rgb(2, 134, 84);
-  cursor: pointer;
-  margin-left: 2%;
-}
-
 .ns {
   margin-bottom: 8%;
 }
 
-button.log:hover {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#00975c),
-    to(rgb(11, 172, 110))
-  );
-}
-
-button.log2:hover {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(rgb(207, 57, 57)),
-    to(rgb(224, 99, 99))
-  );
-}
-
-/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-
 @media screen and (min-width: 0px) and (max-width: 768px) {
   body {
-    background-color: #b3e1fb;
+    background-color: var(--gray);
   }
   .header {
     box-shadow: none;
@@ -351,11 +256,11 @@ button.log2:hover {
     margin-top: 4%;
     margin-bottom: 2%;
     height: 60%;
-    background-color: #ffffff;
+    background-color: var(--white);
     border-radius: 10px;
     box-shadow: none;
   }
-  .caixa {
+  .section-box {
     margin-top: 12%;
     margin-bottom: 1%;
   }
@@ -370,10 +275,6 @@ button.log2:hover {
     transition: 0.2s ease all;
     -moz-transition: 0.2s ease all;
     -webkit-transition: 0.2s ease all;
-  }
-  button.log {
-    margin-top: 10%;
-    padding: 15px 30px;
   }
 }
 

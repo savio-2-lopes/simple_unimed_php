@@ -5,14 +5,14 @@ if (isset($_POST['cadastrar'])) {
     require_once('conecta.php');
     require_once('DAOproposta.php');
 
-    $cadastrar = new PropostaDAO();
+    $cadastrar = new ConsultaPOO();
 
     $nome = trim(strip_tags($_POST['nome']));
     $idade = trim(strip_tags($_POST['idade']));
     $plano = trim(strip_tags($_POST['plano']));
     $total = trim(strip_tags($_POST['total']));
 
-    $insere = $cadastrar->cadastra($nome, $idade, $plano, $total);
+    $insert = $cadastrar->submit($nome, $idade, $plano, $total);
 }
 ?>
 
@@ -36,68 +36,93 @@ if (isset($_POST['cadastrar'])) {
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
-    <div class="box1" id="bx">
-        <center>
-            <div class="caixa">
-                <p>Insira seu dados:</p>
-                <form>
-                    <input type="text" placeholder="Nome" name="nome" id="nome">
-                    <input type="text" placeholder="Idade" name="idade" id="idade">
+<body class="pt-5" style="margin:15rem">
+    <aside class="sufee-login d-flex align-content-center flex-wrap">
 
-                    <select class="selecionar" name="plano" id="tipo">
-                        <option>Enfermaria</option>
-                        <option>Apartamento</option>
-                    </select>
+        <section class="header-box col-lg-10 col-md-10 col-sm-10" id="boxIn">
+            <center>
+                <div class="section-box">
+                    <a href="#" style="text-decoration:none">
+                        <picture class="logo">
+                            <img class="img-fluid" id="logo" srcset="https://logodownload.org/wp-content/uploads/2014/05/unimed-logo-1.png">
+                        </picture>
+                    </a>
 
-                </form>
-                <button class="log" onclick="sumir(); conta()">Calcular Valor Base</button>
-            </div>
-        </center>
-    </div>
+                    <form method="POST" class="mt-3">
+                        <input type="text" placeholder="Nome" name="nome" id="nome">
+                        <input type="text" placeholder="Idade" name="idade" id="idade">
 
-    <div class="box3" id="bx2">
-        <center>
+                        <select class="select-box" name="plano" id="tipo">
+                            <option>Enfermaria</option>
+                            <option>Apartamento</option>
+                        </select>
+                    </form>
 
-            <div class="caixa">
-                <p>Selecione o número de dependentes:</p>
-                <form>
-                    <select class="selecionar" id="b" onclick="mostraIn()">
-                        <option>0</option>
-                        <option>
-                            <div>1</div>
-                        </option>
-                        <option>2</option>
-                        <option>3</option>
-                    </select>
+                    <section class="col-lg-5 col-md-5 col-sm-5 mt-4">
+                        <button class="btn btn-success btn-block" onclick="onVanish(); calculate()">Calcular Valor Base</button>
+                    </section>
+                </div>
+            </center>
+        </section>
 
-                    <input type="text" placeholder="Insira a idade 1" id="n1">
-                    <input type="text" placeholder="Insira a idade 2" id="n2">
-                    <input type="text" placeholder="Insira a idade 3" id="n3">
-                </form>
+        <section class="row-box" id="boxOnShow">
+            <center>
+                <div class="section-box">
+                    <a href="#" style="text-decoration:none">
+                        <picture class="logo">
+                            <img class="img-fluid" id="logo" srcset="https://logodownload.org/wp-content/uploads/2014/05/unimed-logo-1.png">
+                        </picture>
+                    </a>
 
-                <button class="log" onclick="dependente(); sumir2()">Visualizar Mensalidade</button>
-            </div>
-        </center>
-    </div>
+                    <section>
+                        <p>Selecione o número de dependentes:</p>
+                    </section>
 
-    <div class="box4" id="bx3">
-        <center>
-            <div class="caixa">
-                <p>Orçamento:</p>
-                <form action="#" method="POST">
-                    <input type="text" name="nome" placeholder="Nome" id="nome2" readonly>
-                    <input type="text" placeholder="ident" id="ident2" readonly>
-                    <input type="text" name="total" placeholder="Valor" id="valor2" readonly>
-                    <input type="text" name="idade" placeholder="Idade" id="idade3" readonly>
-                    <input type="text" name="plano" placeholder="Entidade" id="tipo2" readonly>
+                    <form method="POST">
+                        <select class="select-box" id="b" onclick="showIn()">
+                            <option>0</option>
+                            <option>
+                                <div>1</div>
+                            </option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
 
-                    <button class="log" type="submit" name="cadastrar">Confirmar</button><button type="" class="log2">Cancelar</button>
-                </form>
+                        <input type="text" placeholder="Insira a idade 1" id="n1">
+                        <input type="text" placeholder="Insira a idade 2" id="n2">
+                        <input type="text" placeholder="Insira a idade 3" id="n3">
+                    </form>
 
-            </div>
-        </center>
-    </div>
+                    <section class="col-lg-5 col-md-5 col-sm-5 mt-4">
+                        <button class="btn btn-success btn-block" onclick="dependente(); onDisplay()">Visualizar</button>
+                    </section>
+                </div>
+            </center>
+        </section>
+
+        <section class="row-box" id="boxIn3">
+            <center>
+                <div class="section-box">
+                    <header>
+                        <h1>Orçamento:</h2>
+                    </header>
+
+                    <form action="#" method="POST">
+                        <input type="text" name="nome" placeholder="Nome" id="nome2" readonly>
+                        <input type="text" placeholder="ident" id="ident2" readonly>
+                        <input type="text" name="total" placeholder="Valor" id="valor2" readonly>
+                        <input type="text" name="idade" placeholder="Idade" id="idade3" readonly>
+                        <input type="text" name="plano" placeholder="Entidade" id="tipo2" readonly>
+
+                        <section class="col-lg-5 col-md-5 col-sm-5 mt-4">
+                            <button class="btn btn-success btn-block" type="submit" name="cadastrar">Confirmar</button>
+                            <button class="btn btn-danger btn-block" target="#boxIn">Cancelar</button>
+                        </section>
+                    </form>
+                </div>
+            </center>
+        </section>
+    </aside>
 
     <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

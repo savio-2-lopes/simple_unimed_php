@@ -5,12 +5,12 @@ var nome = ""
 var idade1 = 0
 var tipo2 = ""
 
-function aparece() {
-    document.getElementById("bx2").style.display = "table-row"
+function onShow() {
+    document.getElementById("boxOnShow").style.display = "table-row"
 }
 
-function aparece2() {
-    document.getElementById("bx3").style.display = "table-row"
+function onShowAll() {
+    document.getElementById("boxIn3").style.display = "table-row"
     document.getElementById("nome2").value = nome
     document.getElementById("ident2").value = "ID: " + Math.floor(Math.random() * 1000000) + 1
     document.getElementById("valor2").value = valor
@@ -18,20 +18,19 @@ function aparece2() {
     document.getElementById("tipo2").value = tipo2
 }
 
-function sumir() {
+function onVanish() {
     tipo2 = document.getElementById("tipo").value
     idade1 = document.getElementById("idade").value
-    document.getElementById("bx").style.display = "none"
-    aparece()
+    document.getElementById("boxIn").style.display = "none"
+    onShow()
 }
 
-function sumir2() {
-    document.getElementById("bx2").style.display = "none"
-    aparece2()
+function onDisplay() {
+    document.getElementById("boxOnShow").style.display = "none"
+    onShowAll()
 }
 
-function compara(idade, tipo) {
-
+function compare(idade, tipo) {
     if (idade <= 18 && idade >= 0) {
         if (tipo == "Enfermaria") {
             valor += 193
@@ -47,7 +46,6 @@ function compara(idade, tipo) {
             valor = valor + 221
             return
         }
-
         if (tipo == "Apartamento") {
             valor += 325
             return
@@ -59,7 +57,6 @@ function compara(idade, tipo) {
             valor += 255
             return
         }
-
         if (tipo == "Apartamento") {
             valor += 373
             return
@@ -83,7 +80,6 @@ function compara(idade, tipo) {
             valor += 616
             return
         }
-
         if (tipo == "Apartamento") {
             valor += 902
             return
@@ -95,7 +91,6 @@ function compara(idade, tipo) {
             valor += 800
             return
         }
-
         if (tipo == "Apartamento") {
             valor += 1200
             return
@@ -103,12 +98,11 @@ function compara(idade, tipo) {
     }
 }
 
-function conta() {
+function calculate() {
     var idade = document.getElementById("idade").value
     tipo = document.getElementById("tipo").value
     nome = document.getElementById("nome").value
-
-    compara(idade, tipo)
+    compare(idade, tipo)
 }
 
 function dependente() {
@@ -118,46 +112,38 @@ function dependente() {
 
     var depen = document.getElementById("b").value
     if (depen == 1) {
-        compara(n1, tipo)
+        compare(n1, tipo)
     }
     if (depen == 2) {
-        compara(n1, tipo)
-        compara(n2, tipo)
+        compare(n1, tipo)
+        compare(n2, tipo)
     }
     if (depen == 3) {
-        compara(n1, tipo)
-        compara(n2, tipo)
-        compara(n3, tipo)
+        compare(n1, tipo)
+        compare(n2, tipo)
+        compare(n3, tipo)
     }
     console.log(valor)
     return
 }
 
-function mostraIn() {
+function showIn() {
     var x = document.getElementById("b").value
-
     if (x == 1) {
         document.getElementById("n1").style.display = "table-row"
-
     }
     if (x == 2) {
         document.getElementById("n1").style.display = "table-row"
-
         document.getElementById("n2").style.display = "table-row"
     }
     if (x == 3) {
         document.getElementById("n1").style.display = "table-row"
-
         document.getElementById("n2").style.display = "table-row"
-
         document.getElementById("n3").style.display = "table-row"
     }
-
     if (x == 0) {
         document.getElementById("n1").style.display = "none"
-
         document.getElementById("n2").style.display = "none"
-
         document.getElementById("n3").style.display = "none"
     }
 }
