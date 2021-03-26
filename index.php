@@ -1,18 +1,18 @@
 <?php
 session_start();
 
-if (isset($_POST['cadastrar'])) {
+if (isset($_POST['register'])) {
     require_once('conecta.php');
     require_once('DAOproposta.php');
 
-    $cadastrar = new ConsultaPOO();
+    $register = new ConsultaPOO();
 
     $nome = trim(strip_tags($_POST['nome']));
     $idade = trim(strip_tags($_POST['idade']));
     $plano = trim(strip_tags($_POST['plano']));
     $total = trim(strip_tags($_POST['total']));
 
-    $insert = $cadastrar->submit($nome, $idade, $plano, $total);
+    $insert = $register->submit($nome, $idade, $plano, $total);
 }
 ?>
 
@@ -28,12 +28,12 @@ if (isset($_POST['cadastrar'])) {
 
     <link rel="icon" type="image/png" href="https://adufs.org.br/manager/resources/uploads/1812/cc5a8eae98baf6166c706ff559773217.jpg" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body class="pt-5">
@@ -115,7 +115,7 @@ if (isset($_POST['cadastrar'])) {
                         <input type="text" name="plano" placeholder="Entidade" id="tipo2" readonly>
 
                         <section class="col-lg-5 col-md-5 col-sm-5 mt-4">
-                            <button class="btn btn-success btn-block" type="submit" name="cadastrar">Confirmar</button>
+                            <button class="btn btn-success btn-block" type="submit" name="register">Confirmar</button>
                             <button class="btn btn-danger btn-block">Cancelar</button>
                         </section>
                     </form>
@@ -125,7 +125,7 @@ if (isset($_POST['cadastrar'])) {
 
     </aside>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
