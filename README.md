@@ -1,7 +1,3 @@
-<h3 align="center">
-    <img alt="unimed" title="unimed" src="./assets/gif.gif" width="600px" />
-</h3>
-
 <p align="center"> :computer: <strong>Em progresso ...</strong> 🚧</p>
 
 <p align="center"> 
