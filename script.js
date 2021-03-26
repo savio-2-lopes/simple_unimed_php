@@ -100,9 +100,7 @@ function compara(idade,tipo){
             valor += 1200
             return
         }
-    }
-
-    
+    }    
 }
 
 function conta(){
