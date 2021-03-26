@@ -1,17 +1,18 @@
+<?php
 session_start();
 
-if(isset($_POST['cadastrar'])) {
-require_once('conecta.php');
-require_once('DAOproposta.php');
+if (isset($_POST['submit'])) {
+    require_once('conexao.php');
+    require_once('DAOproposta.php');
 
-$cadastrar = new PropostaDAO();
+    $submit = new PropostaDAO();
 
-$nome = trim(strip_tags($_POST['nome']));
-$idade = trim(strip_tags($_POST['idade']));
-$categoria_plano = trim(strip_tags($_POST['tipo']));
-$total = trim(strip_tags($_POST['valor']));
+    $nome = trim(strip_tags($_POST['nome']));
+    $idade = trim(strip_tags($_POST['idade']));
+    $categoria_plano = trim(strip_tags($_POST['tipo']));
+    $total = trim(strip_tags($_POST['valor']));
 
-$insere = $cadastrar->cadastra($nome, $idade, $categoria_plano, $total);
+    $insere = $submit->cadastra($nome, $idade, $categoria_plano, $total);
 }
 ?>
 
@@ -89,7 +90,7 @@ $insere = $cadastrar->cadastra($nome, $idade, $categoria_plano, $total);
                     <input type="text" name="valor" placeholder="Valor" id="valor2" readonly>
                     <input type="text" name="idade" placeholder="Idade" id="idade3" readonly>
                     <input type="text" name="tipo" placeholder="Entidade" id="tipo2" readonly>
-                    <button class="log" type="submit" name="cadastrar">Confirmar</button><button type="" class="log2">Cancelar</button>
+                    <button class="log" type="submit" name="submit">Confirmar</button><button type="" class="log2">Cancelar</button>
                 </form>
 
             </div>
